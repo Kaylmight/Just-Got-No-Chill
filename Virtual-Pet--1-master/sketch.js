@@ -42,7 +42,7 @@ food.display()
 
   
   if(foodS!==undefined){
-    fill("blue");
+    fill(255);
     textSize(15);
     if(lastFed >= 12)
     {
@@ -61,9 +61,9 @@ food.display()
 
   drawSprites();
   
-  fill("blue");
+  fill(255);
   textSize(20)
-  text("FOOD LEFT : "+foodS,200,200);
+  text("FOOD LEFT : "+foodS,200,100);
   text("GO FORWARD TO PRESS THE BUTTON AND FEED YOUR PET  ",20,20);
 
   }
@@ -73,6 +73,7 @@ function readStock(data)
 {
     foodS = data.val();
     food.foodStock = foodS;
+    console.log(foodS)
 }
 
 function writeStock(x)
